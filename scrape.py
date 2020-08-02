@@ -67,9 +67,9 @@ for x in items:
         with smtplib.SMTP_SSL((serverAddress), 465, context=context) as server:
             server.login(sendFrom, pwd)
             server.sendmail(sendFrom, sendTo, message)
-        print('[' + timestamp.strftime("%c") + "] Sale found!")
+        print('[' + timestamp.strftime("%c") + "] " + prod_name + " - Sale found!")
     else:
-        print('[' + timestamp.strftime("%c") + "] No sale")
+        print('[' + timestamp.strftime("%c") + "] " + prod_name + " - No sale")
 print("----------------------------------")
 
 
